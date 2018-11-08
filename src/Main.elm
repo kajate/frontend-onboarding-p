@@ -294,13 +294,12 @@ main =
         }
 
 
-
 --HELPER FUNCTIONS
 
 
 safeDivide : Float -> Float -> Maybe Float
-safeDivide a b =
-    if b == 0 then
+safeDivide a b c =
+    if b < 0 then
         Nothing
     else
         Just (a / b)
